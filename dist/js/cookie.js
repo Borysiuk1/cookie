@@ -1,38 +1,45 @@
 "use strict";
 
-var _jsCookie = _interopRequireDefault(require("js-cookie"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-var banner = 'version1';
-
-if (banner == 'version1') {
+// let banner = 'version1';
+jQuery(document).ready(function ($) {
+  //   if (banner == 'version1') {
+  var defaultSettings = {
+    date: new Date(),
+    necessary: true,
+    performance: true,
+    analytics: true,
+    marketing: true
+  };
   var acceptCookie = document.querySelector('.cookie-bar__buttons-holder_right');
   var cookieBlock = document.querySelector('.cookie-bar');
+  var savedCookieSettings = Cookies.getJSON('Cookiebar');
 
-  var currentCookieSelection = _jsCookie["default"].get('Cookiebar');
-
-  var body = document.querySelector('body');
-
-  if (currentCookieSelection !== 'CookieAllowed') {
+  if (!savedCookieSettings) {
+    document.body.classList.add('noScroll');
     cookieBlock.classList.toggle('cookie-bar--opened');
+  } else {
+    defaultSettings.performance = savedCookieSettings.performance;
+    defaultSettings.analytics = savedCookieSettings.analytics;
+    defaultSettings.marketing = savedCookieSettings.marketing;
   }
 
   acceptCookie.addEventListener('click', function () {
     cookieBlock.classList.toggle('cookie-bar--opened');
-    body.classList.remove('noScroll');
+    document.body.classList.remove('noScroll');
+    var savedCookieSettings = Cookies.getJSON('Cookiebar');
 
-    var currentCookieSelection = _jsCookie["default"].get('Cookiebar');
-
-    if (currentCookieSelection !== 'CookieAllowed') {
-      _jsCookie["default"].remove('Cookiebar');
-
+    if (!savedCookieSettings) {
+      Cookies.remove('Cookiebar');
       localStorage.clear();
-
-      _jsCookie["default"].set('Cookiebar', 'CookieAllowed', {
-        expires: 30
+      Cookies.set('Cookiebar', defaultSettings, {
+        expires: 365
       });
     }
+  });
+  $('.custom-checkbox').change(function () {
+    var optionValue = $(this).is(':checked');
+    var optionName = $(this).attr('name');
+    defaultSettings[optionName] = optionValue;
   });
   var openSettings = document.querySelector('.cookie-bar__buttons-holder_left');
   var settings = document.querySelector('.cookie-bar__settings');
@@ -51,10 +58,6 @@ if (banner == 'version1') {
   });
   var openInfo1 = document.querySelector('.cookie-settings__list-title1');
   var info1 = document.querySelector('.cookie-settings__list-description1');
-  var openInfo2 = document.querySelector('.cookie-settings__list-title2');
-  var info2 = document.querySelector('.cookie-settings__list-description2');
-  var openInfo3 = document.querySelector('.cookie-settings__list-title3');
-  var info3 = document.querySelector('.cookie-settings__list-description3');
   openInfo1.addEventListener('click', function () {
     info1.classList.toggle('opened');
     openInfo1.classList.toggle('opened');
@@ -63,6 +66,8 @@ if (banner == 'version1') {
     info3.classList.remove('opened');
     openInfo3.classList.remove('opened');
   });
+  var openInfo2 = document.querySelector('.cookie-settings__list-title2');
+  var info2 = document.querySelector('.cookie-settings__list-description2');
   openInfo2.addEventListener('click', function () {
     info2.classList.toggle('opened');
     openInfo2.classList.toggle('opened');
@@ -71,6 +76,8 @@ if (banner == 'version1') {
     info3.classList.remove('opened');
     openInfo3.classList.remove('opened');
   });
+  var openInfo3 = document.querySelector('.cookie-settings__list-title3');
+  var info3 = document.querySelector('.cookie-settings__list-description3');
   openInfo3.addEventListener('click', function () {
     info3.classList.toggle('opened');
     openInfo3.classList.toggle('opened');
@@ -79,62 +86,29 @@ if (banner == 'version1') {
     info2.classList.remove('opened');
     openInfo2.classList.remove('opened');
   });
-  jQuery(document).ready(function ($) {
-    if ($('.cookie-bar').hasClass('cookie-bar--opened')) {
-      $('body').addClass('noScroll');
-    }
 
-    $('#performance').prop('checked', true);
-    $('#analytics').prop('checked', true);
-    $('#marketing').prop('checked', true);
-  });
-} else if (banner == 'version2') {
-  //Cookie-bottom
-  var getCookie = function getCookie() {
-    var cookieValue = document.cookie.match(/(;)?Cookiebar=([^;]*);?/);
-
-    if (cookieValue == null) {
-      return undefined;
-    } else {
-      return decodeURI(cookieValue[2]);
-    }
-  };
-
-  var setCookie = function setCookie(name, value) {
-    var exdays = 30;
-    var exdate = new Date();
-    exdate.setDate(exdate.getDate() + parseInt(exdays));
-    var cValue = encodeURI(value) + (exdays === null ? '' : '; expires=' + exdate.toUTCString() + ';path=/');
-    document.cookie = name + '=' + cValue;
-  };
-
-  var removeCookies = function removeCookies() {
-    // Clear cookies
-    document.cookie.split(';').forEach(function (c) {
-      document.cookie = c.replace(/^\ +/, '').replace(/\=.*/, '=;expires=' + new Date().toUTCString() + ';path=/');
-    }); // Clear localStorage
-
-    localStorage.clear();
-  };
-
-  var _acceptCookie = document.querySelector('.cookie__button');
-
-  var _cookieBlock = document.querySelector('.cookie');
-
-  var _currentCookieSelection = getCookie();
-
-  if (_currentCookieSelection !== 'CookieAllowed') {
-    _cookieBlock.classList.toggle('cookie--opened');
+  if ($('.cookie-bar').hasClass('cookie-bar--opened')) {
+    $('body').addClass('noScroll');
   }
 
-  _acceptCookie.addEventListener('click', function () {
-    _cookieBlock.classList.toggle('cookie--opened');
-
-    var currentCookieSelection = getCookie();
-
-    if (currentCookieSelection !== 'CookieAllowed') {
-      removeCookies();
-      setCookie('Cookiebar', 'CookieAllowed');
-    }
-  });
-}
+  $('#performance').prop('checked', defaultSettings.performance);
+  $('#analytics').prop('checked', defaultSettings.analytics);
+  $('#marketing').prop('checked', defaultSettings.marketing); //   }
+}); // else if (banner == 'version2') {
+//   //Cookie-bottom
+//   let acceptCookie = document.querySelector('.cookie__button');
+//   let cookieBlock = document.querySelector('.cookie');
+//   let currentCookieSelection = Cookies.get('Cookiebar');
+//   if (currentCookieSelection !== 'CookieAllowed') {
+//     cookieBlock.classList.toggle('cookie--opened');
+//   }
+//   acceptCookie.addEventListener('click', () => {
+//     cookieBlock.classList.toggle('cookie--opened');
+//     let currentCookieSelection = Cookies.get('Cookiebar');
+//     if (currentCookieSelection !== 'CookieAllowed') {
+//       Cookies.remove('Cookiebar');
+//       localStorage.clear();
+//       Cookies.set('Cookiebar', 'CookieAllowed', { expires: 30 });
+//     }
+//   });
+// }
