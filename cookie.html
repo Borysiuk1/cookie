@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/dist/libs/normalize.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/dist/css/cookie.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <meta name="format-detection" content="telephone=no">
+</head>
+
+<body>
+
+    <h1>Cookie</h1>
+
+    <div class="cookie-bar">
+        <div class="cookie-bar__overlay"></div>
+        <div class="cookie-bar__container">
+            <div class="cookie-bar__content">
+                <div class="cookie-bar__text-holder">
+                    <p class="cookie-bar__title">Ihre Nutzer-Einstellungen</p>
+                    <p class="cookie-bar__text">Für eine uneingeschränkte Nutzung aller Funktionen und Inhalte der Website und eine optimale Performance nutzen wir Cookies. Durch die Nutzung unserer Website stimmen Sie der Verwendung von diesen Cookies zu.</p>
+                    <p class="cookie-bar__text">Um Ihnen ein bestmögliches Nutzererlebnis zu ermöglichen, würden wir zusätzlich gerne entsprechende Technologien einsetzen.</p>
+                    <p class="cookie-bar__text">Ich erlaube den Einsatz von Cookies sozialer Medien und interessenbezogener Werbung. Vielen Dank für Ihr Einverständnis!</p>
+                    <a class="cookie-bar__link" href="/datenschutz.html">Genaue Informationen finden Sie in unseren Datenschutz- und Cookie-Richtlinien.</a>
+                </div>
+                <div class="cookie-bar__buttons-holder">
+                    <button class="cookie-bar__buttons-holder_item cookie-bar__buttons-holder_left">
+                        Cookie-Einstellungen
+                    </button>
+                    <button class="cookie-bar__buttons-holder_item cookie-bar__buttons-holder_right">
+                        Akzeptieren
+                    </button>
+                </div>
+            </div>
+
+            <div class="cookie-bar__settings">
+                <div class="cookie-bar__settings-overlay"></div>
+                <div class="cookie-bar__settings-container">
+                    <div class="cookie-settings">
+                        <div class="cookie-settings__header">
+                            <p>Cookie-Einstellungen</p>
+                            <!-- <svg class="cookie-settings__close" width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.57696 10.9993L0.351463 2.77343C0.125204 2.54699 0.000358582 2.24489 0 1.92276C0 1.60046 0.124846 1.298 0.351463 1.07192L1.07228 0.351285C1.29889 0.124309 1.60099 0 1.92348 0C2.24543 0 2.54753 0.124309 2.77415 0.351285L10.9996 8.5766L19.2255 0.351285C19.4518 0.124309 19.754 0 20.0763 0C20.3983 0 20.7006 0.124309 20.9268 0.351285L21.648 1.07192C22.1173 1.54125 22.1173 2.30463 21.648 2.77343L13.4223 10.9993L21.648 19.2248C21.8744 19.4516 21.9991 19.7537 21.9991 20.0758C21.9991 20.3979 21.8744 20.7 21.648 20.9267L20.927 21.6473C20.7007 21.8741 20.3983 21.9986 20.0765 21.9986C19.7542 21.9986 19.4519 21.8741 19.2257 21.6473L10.9998 13.4218L2.77433 21.6473C2.54771 21.8741 2.24561 21.9986 1.92366 21.9986H1.9233C1.60117 21.9986 1.29907 21.8741 1.07246 21.6473L0.351645 20.9267C0.125383 20.7002 0.000537872 20.3979 0.000537872 20.0758C0.000537872 19.7537 0.125383 19.4516 0.351645 19.225L8.57696 10.9993Z" fill="#2A2F32"/>
+                            </svg> -->
+                        </div>
+
+                        <div class="cookie-settings__content">
+                            <ul class="cookie-settings__list">
+                                <li class="cookie-settings__list-item">
+                                    <div class="cookie-settings__list-row">
+                                        <p class="cookie-settings__list-title cookie-settings__list-title--no-icon">Essenzielle-Cookies</p>
+                                        <label class="cookie-settings__list-status">immer aktiviert</label>
+                                    </div>
+                                </li>
+                                <li class="cookie-settings__list-item">
+                                    <div class="cookie-settings__list-row">
+                                        <p class="cookie-settings__list-title cookie-settings__list-title1">
+                                            Performance-Cookies
+                                            <i>
+                                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.8082 0.668631L11.4151 0.221886C11.2914 0.0823677 11.1268 0.00550598 10.9509 0.00550598C10.7751 0.00550598 10.6103 0.0823677 10.4866 0.221886L6.00268 5.28308L1.51357 0.21627C1.39006 0.0767516 1.22528 0 1.04947 0C0.873666 0 0.708786 0.0767516 0.585175 0.21627L0.192002 0.660262C-0.0640005 0.948988 -0.0640005 1.4193 0.192002 1.70803L5.53683 7.76237C5.66034 7.90178 5.82492 8 6.00229 8H6.00434C6.18024 8 6.34483 7.90167 6.46835 7.76237L11.8082 1.72443C11.9319 1.58502 11.9998 1.39364 12 1.19521C12 0.996669 11.9319 0.807929 11.8082 0.668631Z" fill="#2A2F32"/>
+                                                </svg> 
+                                            </i>
+                                        </p>
+                                        <input type="checkbox" class="custom-checkbox" name="performance" id="performance" cheked>
+                                        <label class="cookie-settings__list-label" for="performance"></label>
+                                    </div>
+                                    <div class="cookie-settings__list-description cookie-settings__list-description1">
+                                        <p class="cookie-settings__list-info">
+                                            Diese Cookies werden verwendet, um die Leistung und Funktionalität unserer Websiten zu verbessern, sind jedoch für deren Nutzung nicht essenziell. Beispielsweise wird Ihre bevorzugte Sprache oder die Region gespeichert, in der Sie sich befinden.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="cookie-settings__list-item">
+                                    <div class="cookie-settings__list-row">
+                                        <p class="cookie-settings__list-title cookie-settings__list-title2">
+                                            Analytics-Cookiess
+                                            <i>
+                                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.8082 0.668631L11.4151 0.221886C11.2914 0.0823677 11.1268 0.00550598 10.9509 0.00550598C10.7751 0.00550598 10.6103 0.0823677 10.4866 0.221886L6.00268 5.28308L1.51357 0.21627C1.39006 0.0767516 1.22528 0 1.04947 0C0.873666 0 0.708786 0.0767516 0.585175 0.21627L0.192002 0.660262C-0.0640005 0.948988 -0.0640005 1.4193 0.192002 1.70803L5.53683 7.76237C5.66034 7.90178 5.82492 8 6.00229 8H6.00434C6.18024 8 6.34483 7.90167 6.46835 7.76237L11.8082 1.72443C11.9319 1.58502 11.9998 1.39364 12 1.19521C12 0.996669 11.9319 0.807929 11.8082 0.668631Z" fill="#2A2F32"/>
+                                                </svg> 
+                                            </i>
+                                        </p>
+                                        <input type="checkbox" class="custom-checkbox" name="analytics" id="analytics" cheked>
+                                        <label class="cookie-settings__list-label" for="analytics"></label>
+                                    </div>
+                                    <div class="cookie-settings__list-description cookie-settings__list-description2">
+                                        <p class="cookie-settings__list-info">
+                                            Wir verwenden Analytics-Cookies, um zu messen, wie Benutzer mit Website-Inhalten interagieren. Auf diese Weise können wir unsere Websiten und Anwendungen für Sie anpassen, um Ihre Erfahrung zu verbessern.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="cookie-settings__list-item">
+                                    <div class="cookie-settings__list-row">
+                                        <p class="cookie-settings__list-title cookie-settings__list-title3">
+                                            Marketing-Cookies
+                                            <i>
+                                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.8082 0.668631L11.4151 0.221886C11.2914 0.0823677 11.1268 0.00550598 10.9509 0.00550598C10.7751 0.00550598 10.6103 0.0823677 10.4866 0.221886L6.00268 5.28308L1.51357 0.21627C1.39006 0.0767516 1.22528 0 1.04947 0C0.873666 0 0.708786 0.0767516 0.585175 0.21627L0.192002 0.660262C-0.0640005 0.948988 -0.0640005 1.4193 0.192002 1.70803L5.53683 7.76237C5.66034 7.90178 5.82492 8 6.00229 8H6.00434C6.18024 8 6.34483 7.90167 6.46835 7.76237L11.8082 1.72443C11.9319 1.58502 11.9998 1.39364 12 1.19521C12 0.996669 11.9319 0.807929 11.8082 0.668631Z" fill="#2A2F32"/>
+                                                </svg> 
+                                            </i>
+                                        </p>
+                                        <input type="checkbox" class="custom-checkbox" name="marketing" id="marketing" cheked>
+                                        <label class="cookie-settings__list-label" for="marketing"></label>
+                                    </div>
+                                    <div class="cookie-settings__list-description cookie-settings__list-description3">
+                                        <p class="cookie-settings__list-info">
+                                            Diese Cookies werden verwendet, um die Werbung für Sie und Ihre Interessen relevanter zu machen. Ziel ist es, Anzeigen zu schalten, die für den einzelnen Nutzer relevant und ansprechend und damit für Publisher und Werbekunden von Drittanbietern wertvoller sind.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="cookie-settings__footer">
+                            <button class="cookie-settings__save-btn">Einstellungen speichern</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cookie">
+        <div class="cookie__holder">
+            <div class="cookie__textHolder">
+                <svg class="cookie__icon" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                        <path d="M37.9628 17.9386C37.873 16.2701 37.4501 14.23 36.6517 12.1686C36.3722 11.4468 35.4607 11.2261 34.8813 11.7321C34.4684 12.0927 33.7452 11.9902 33.5037 11.5392C33.2153 11.0007 32.5471 10.7954 32.0061 11.0784C30.6837 11.7706 29.0199 11.1257 28.5446 9.66596C28.3674 9.12159 27.8061 8.80024 27.2468 8.92337C25.7049 9.26238 24.2683 8.08296 24.2683 6.53238C24.2683 5.92805 24.4906 5.34754 24.8942 4.8978C25.518 4.20263 25.0565 3.09096 24.1232 3.04265C23.5656 3.01363 23.167 2.52759 23.4234 2.09566C23.8151 1.43589 23.4363 0.584201 22.6817 0.435251C21.5402 0.209935 20.304 0.00146484 18.999 0.00146484C8.58645 0.00146484 0 7.91553 0 18.4068C0 28.824 8.51327 37.9995 18.999 37.9995C30.0565 37.9995 38.6371 28.5405 37.9628 17.9386ZM34.71 24.8725C33.4704 24.4839 32.5804 23.3262 32.5804 21.9691C32.5804 20.2457 34.0217 18.8475 35.7709 18.9302C35.7819 20.9533 35.4237 22.9691 34.71 24.8725ZM6.01141 15.4382C6.01141 17.3793 3.85925 18.5297 2.25139 17.5075C2.33651 15.9381 2.64391 14.4348 3.14382 13.025C4.65128 12.766 6.01141 13.9303 6.01141 15.4382ZM18.999 35.7731C10.4055 35.7731 3.07361 28.6674 2.29591 19.9394C5.2994 20.7814 8.23786 18.5083 8.23786 15.4382C8.23786 13.0535 6.4429 11.0815 4.1334 10.7988C6.91261 5.66036 12.4633 2.22791 18.999 2.22791C19.7144 2.22791 20.427 2.30554 21.1184 2.41501C21.1317 3.36771 21.6331 4.21428 22.4014 4.73349C21.1023 7.84851 23.4457 11.268 26.8013 11.2072C27.8721 13.1103 30.1055 13.9981 32.1781 13.3967C32.9416 14.0751 33.9998 14.3162 34.9733 14.0998C35.2517 14.9741 35.4572 15.8425 35.5902 16.7007C32.6999 16.7186 30.3539 19.0747 30.3539 21.9691C30.3539 24.2244 31.7741 26.1613 33.7865 26.9088C30.956 32.1802 25.3895 35.7731 18.999 35.7731Z" fill="white"/>
+                        <path d="M22.5622 22.6367C19.6568 22.6367 17.293 25.0005 17.293 27.906C17.293 30.8114 19.6568 33.1752 22.5622 33.1752C25.4677 33.1752 27.8315 30.8114 27.8315 27.906C27.8315 25.0005 25.4677 22.6367 22.5622 22.6367ZM22.5622 30.9488C20.8845 30.9488 19.5194 29.5838 19.5194 27.906C19.5194 26.2282 20.8845 24.8632 22.5622 24.8632C24.24 24.8632 25.605 26.2282 25.605 27.906C25.605 29.5838 24.24 30.9488 22.5622 30.9488Z" fill="white"/>
+                        <path d="M20.7067 13.9534C20.7067 11.8664 19.0088 10.1685 16.9217 10.1685C14.8346 10.1685 13.1367 11.8664 13.1367 13.9534C13.1367 16.0404 14.8346 17.7384 16.9217 17.7384C19.0088 17.7384 20.7067 16.0404 20.7067 13.9534ZM16.9217 15.5119C16.0623 15.5119 15.3632 14.8128 15.3632 13.9534C15.3632 13.0941 16.0623 12.3949 16.9217 12.3949C17.7811 12.3949 18.4802 13.0941 18.4802 13.9534C18.4802 14.8128 17.7811 15.5119 16.9217 15.5119Z" fill="white"/>
+                        <path d="M10.9842 20.2617C8.89711 20.2617 7.19922 21.9597 7.19922 24.0467C7.19922 26.1337 8.89711 27.8317 10.9842 27.8317C13.0713 27.8317 14.7691 26.1337 14.7691 24.0467C14.7691 21.9597 13.0713 20.2617 10.9842 20.2617ZM10.9842 25.6052C10.1248 25.6052 9.42567 24.906 9.42567 24.0467C9.42567 23.1874 10.1248 22.4882 10.9842 22.4882C11.8436 22.4882 12.5427 23.1874 12.5427 24.0467C12.5427 24.906 11.8436 25.6052 10.9842 25.6052Z" fill="white"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0">
+                            <rect width="38" height="38" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+
+                <p class="cookie__text">Diese Webseite nutzt Cookies. Durch Verwendung der Webseite erklären Sie sich mit der <a href="/datenschutz.html">Cookie-Nutzung</a> einverstanden.</p>
+            </div>
+            <button class="cookie__button">verstanden</button>
+        </div>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script> -->
+    <script src="/dist/libs/js.cookie-2.2.1.min.js"></script>
+    <script src="/src/js/cookie.js"></script>
+
+</body>
+</html>
